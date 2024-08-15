@@ -1,0 +1,29 @@
+/* Header.module.css */
+.customBrand {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    margin-left: 60px;
+
+}
+
+.navbarCustom {}
+
+
+
+.navbarCustom .nav-link {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbarCustom .nav-link:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.activeLink {
+    background-color: #ffffff;
+    color: #000000 !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
