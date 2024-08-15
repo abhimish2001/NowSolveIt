@@ -1,7 +1,10 @@
 function ContactUs() {
-    return <>
-        <h1>Contact</h1>
-    </>
+    return (
+        <div>
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for more information.</p>
+        </div>
+    );
 }
 
-export default ContactUs
+export default ContactUs;

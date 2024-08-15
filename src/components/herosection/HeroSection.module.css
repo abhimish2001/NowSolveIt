@@ -13,6 +13,95 @@
 
 .heroTextContainer {
     background-color: rgba(0, 0, 0, 0.6);
+
+    /* General styles for the hero section */
+    .hero {
+        background-image: url('your-image-path.jpg');
+        /* Add your image path */
+        background-size: cover;
+        /* Ensures image covers the entire section */
+        background-position: center;
+        height: 500px;
+        /* You can adjust this height */
+        padding: 50px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        color: white;
+    }
+
+    /* Container for hero text */
+    .heroTextContainer {
+        background-color: rgba(0, 0, 0, 0.6);
+        /* Semi-transparent black background */
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    /* Styles for the main heading */
+    .hero h1 {
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        /* Shadow for text clarity */
+    }
+
+    /* Styles for the hero section paragraph */
+    .hero p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        /* Shadow for text clarity */
+    }
+
+    /* Button styling */
+    .btn {
+        font-size: 1.25rem;
+        padding: 10px 20px;
+        color: white;
+        background-color: #007bff;
+        /* Bootstrap blue */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #0056b3;
+        /* Darken blue on hover */
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+        .hero {
+            height: 300px;
+            /* Adjust height for smaller screens */
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            /* Reduce font size for smaller screens */
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            /* Reduce font size for smaller screens */
+        }
+    }
+
+    /* Parallax Effect (Optional) */
+    .hero-parallax {
+        background-attachment: fixed;
+        /* Creates a parallax effect */
+        background-size: cover;
+        background-position: center;
+    }
+
     /* Semi-transparent black background */
     padding: 20px;
     border-radius: 10px;
@@ -20,6 +109,7 @@
 
 .hero h1 {
     font-size: 3rem;
+    font-weight: 400;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     /* Add shadow for extra clarity */
