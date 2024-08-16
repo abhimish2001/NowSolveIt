@@ -1,0 +1,66 @@
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.courseImage {
+    width: 100%;
+    /* Ensures the image takes up the full width of the card */
+    height: 180px;
+    /* Sets a fixed height for the image */
+    object-fit: cover;
+    /* Ensures the image covers the area while maintaining aspect ratio */
+    border-radius: 8px 8px 0 0;
+    /* Matches the card's top border radius */
+    margin-bottom: 15px;
+    /* Adds some space between the image and the content */
+}
+
+.courseName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.courseDetails {
+    margin-bottom: 15px;
+}
+
+.coursePrice,
+.courseDuration {
+    font-size: 1rem;
+    color: #555;
+}
+
+.courseDescription {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.enrollButton {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.enrollButton:hover {
+    background-color: #e65a50;
+}

@@ -5,21 +5,27 @@
 
 .cardSize {
     width: 300px;
-    /* Set a fixed width for all cards */
     height: 400px;
-    /* Set a fixed height for all cards */
     margin: 20px auto;
-    /* Center the card and add space around it */
     display: flex;
     flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    /* Add light border */
+    border-radius: 8px;
+    /* Slight rounding of corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add box-shadow for depth */
+    background-color: #fff;
+    /* Ensure cards have a white background */
+    transition: box-shadow 0.3s ease, transform 0.1s ease;
+    /* Smooth transitions */
 }
 
 .cardImg {
     height: 150px;
-    /* Adjust the height for the image */
     object-fit: contain;
     width: 100%;
-    /* Ensure the image covers the full width of the card */
+
 }
 
 .cardBody {
@@ -59,23 +65,19 @@
     background-color: #0056b3;
 }
 
-.cardHover {
-    transition: transform 0.3s ease;
-}
-
 .cardHover:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increase shadow on hover */
 }
 
 @media (max-width: 768px) {
     .cardSize {
         width: 90%;
         height: auto;
-        /* Allow height to adjust for smaller screens */
     }
 
     .cardImg {
         height: 250px;
-        /* Adjust image height for smaller screens */
     }
 }

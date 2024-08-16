@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
 
 function Header() {
+    const location = useLocation();
+
     return (
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
             <div className="container-fluid">
@@ -10,15 +12,31 @@ function Header() {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className={`collapse navbar-collapse ${styles.navbarCustom}`} id="navbarSupportedContent">
-                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item mx-1 fs-5 fw-bold">
-                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                            <Link
+                                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+                                aria-current="page"
+                                to="/"
+                            >
+                                Home
+                            </Link>
                         </li>
                         <li className="nav-item mx-1 fs-5 fw-bold">
-                            <Link className="nav-link" to="/courses">Courses</Link>
+                            <Link
+                                className={`nav-link ${location.pathname === '/courses' ? 'active' : ''}`}
+                                to="/courses"
+                            >
+                                Courses
+                            </Link>
                         </li>
                         <li className="nav-item mx-1 fs-5 fw-bold">
-                            <Link className="nav-link" to="/contact">Contact Us</Link>
+                            <Link
+                                className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+                                to="/contact"
+                            >
+                                Contact Us
+                            </Link>
                         </li>
                     </ul>
                 </div>

@@ -1,0 +1,132 @@
+/* Updated container styles */
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+}
+
+/* Heading Styling */
+.headingContainer {
+    background: linear-gradient(135deg, #ff6f61, #ff3e36);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+/* Cards Container */
+.cardsContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Card Styles */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    flex: 1 1 18%;
+    /* Enforce fixed height */
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Adjust image height to keep cards uniform */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Card Content */
+.card h3 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+    flex: 0 1 auto;
+    min-height: 60px;
+    /* Ensure title consistency */
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    flex: 1 1 auto;
+    /* Allow descriptions to fill the remaining space */
+}
+
+.card .price {
+    font-weight: bold;
+    margin: 15px 0;
+    flex: 0 1 auto;
+}
+
+/* Button with consistent size and placement */
+.card .btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    flex: 0 1 auto;
+}
+
+.card .btn:hover {
+    background-color: #e65a50;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Navigation Buttons */
+.prevButton,
+.nextButton {
+    background-color: rgba(255, 111, 97, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    outline: none;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.prevButton {
+    left: 10px;
+}
+
+.nextButton {
+    right: 10px;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+    background-color: rgba(230, 90, 80, 0.8);
+}
+
+.prevButton:active,
+.nextButton:active {
+    background-color: rgba(204, 82, 67, 0.8);
+}

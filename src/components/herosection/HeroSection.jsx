@@ -1,5 +1,5 @@
 import styles from './HeroSection.module.css';
-import heroImage from '../../assets/heros/hero.jpg';
+import heroImage from '../../assets/heros/hero1.jpg';
 
 function HeroSection() {
     return (
@@ -7,7 +7,6 @@ function HeroSection() {
             <div className={styles.heroTextContainer}>
                 <h1>Welcome to NowSolveIt</h1>
                 <p>Learn the skills you need to succeed in today’s world.</p>
-                <a href="#" className="btn btn-primary btn-lg">Start Learning</a>
             </div>
         </section>
     );
