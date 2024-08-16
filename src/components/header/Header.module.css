@@ -1,29 +1,42 @@
 /* Header.module.css */
 .customBrand {
-    font-family: 'Courier New', monospace;
-    font-weight: bold;
-    margin-left: 60px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #000000;
+    /* Black text for the brand name */
+    margin-left: 50px;
+}
+
+.navbarCustom {
+    background-color: #ffffff;
+    /* White background for the header */
 
 }
 
-.navbarCustom {}
-
-
-
 .navbarCustom .nav-link {
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    /* Black text for navigation links */
+    font-weight: 500;
     transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 .navbarCustom .nav-link:hover {
-    background-color: #ffffff;
-    color: #000000;
-    border-radius: 5px;
-    padding: 5px 10px;
+    background-color: #fb9c05;
+    /* Orange background on hover */
+    color: #ffffff;
+    /* White text on hover */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .activeLink {
-    background-color: #ffffff;
-    color: #000000 !important;
+    background-color: #fb9c05;
+    /* Orange background for active link */
+    color: #ffffff !important;
+    /* White text for active link */
+    padding: 8px 12px;
     border-radius: 5px;
-    padding: 5px 10px;
 }

@@ -40,8 +40,8 @@ const cardData = [
         title: 'React',
     },
     {
-        imgSrc: 'https://via.placeholder.com/150/000000/ffffff?text=More',
-        title: 'And More',
+        imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png',
+        title: 'Python',
     },
 ];
 
@@ -63,6 +63,16 @@ function Cards() {
                         </div>
                     ))}
                 </div>
+            </div>
+            <div className="d-flex justify-content-center mt-4">
+                <a
+                    href="#" // Replace with your Google Form link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.exploreButton}
+                >
+                    Explore More
+                </a>
             </div>
         </div>
     );

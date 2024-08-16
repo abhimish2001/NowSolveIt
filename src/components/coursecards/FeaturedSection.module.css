@@ -78,7 +78,7 @@
 /* Button with consistent size and placement */
 .card .btn {
     background-color: transparent;
-    color: white;
+    color: #fb9c05;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -88,7 +88,7 @@
 }
 
 .card .btn:hover {
-    background-color: #e65a50;
+    background-color: rgba(251, 156, 5, 0.8);
 }
 
 /* Hover Effects */
@@ -99,7 +99,7 @@
 /* Navigation Buttons */
 .prevButton,
 .nextButton {
-    background-color: rgba(255, 111, 97, 0.8);
+    background-color: rgba(251, 156, 5, 0.8);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -123,10 +123,28 @@
 
 .prevButton:hover,
 .nextButton:hover {
-    background-color: rgba(230, 90, 80, 0.8);
+    background-color: rgba(251, 156, 5, 0.8);
 }
 
 .prevButton:active,
 .nextButton:active {
-    background-color: rgba(204, 82, 67, 0.8);
+    background-color: rgba(251, 156, 5, 0.8);
+}
+
+.enrollButton {
+    background-color: #fb9c05;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.enrollButton:hover {
+    background-color: #fb9c05;
+    transform: scale(1.1);
+    /* Zoom in effect */
 }

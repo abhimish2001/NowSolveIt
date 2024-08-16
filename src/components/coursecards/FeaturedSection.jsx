@@ -141,6 +141,17 @@ const FeaturedSection = () => {
                     <FaArrowRight />
                 </button>
             </div>
+            <div className="d-flex justify-content-center mt-4">
+                <a
+                    href="#" // Replace with your Google Form link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.enrollButton}
+                >
+                    Enroll Now
+                </a>
+            </div>
+
         </div>
     );
 };

@@ -5,7 +5,7 @@ function Header() {
     const location = useLocation();
 
     return (
-        <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+        <nav className="navbar navbar-expand-lg navbar-light">
             <div className="container-fluid">
                 <Link className={`navbar-brand fs-2 ${styles.customBrand}`} to="/">NowSolveIt</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@ function Header() {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item mx-1 fs-5 fw-bold">
                             <Link
-                                className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
+                                className={`nav-link ${location.pathname === '/' ? styles.activeLink : ''}`}
                                 aria-current="page"
                                 to="/"
                             >
@@ -24,7 +24,7 @@ function Header() {
                         </li>
                         <li className="nav-item mx-1 fs-5 fw-bold">
                             <Link
-                                className={`nav-link ${location.pathname === '/courses' ? 'active' : ''}`}
+                                className={`nav-link ${location.pathname === '/courses' ? styles.activeLink : ''}`}
                                 to="/courses"
                             >
                                 Courses
@@ -32,7 +32,7 @@ function Header() {
                         </li>
                         <li className="nav-item mx-1 fs-5 fw-bold">
                             <Link
-                                className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
+                                className={`nav-link ${location.pathname === '/contact' ? styles.activeLink : ''}`}
                                 to="/contact"
                             >
                                 Contact Us

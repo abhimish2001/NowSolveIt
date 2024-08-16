@@ -4,9 +4,11 @@ import Header from './components/header/Header';
 import CoursePage from './pages/coursepage/CoursePage';
 import ContactUs from './pages/contactus/ContactUs';
 import Footer from './components/footer/Footer';
+import Top from './components/top/Top'
 function App() {
   return (
     <Router>
+      <Top />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />

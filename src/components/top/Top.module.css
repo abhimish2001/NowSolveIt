@@ -1,0 +1,46 @@
+.headerTop {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+}
+
+.headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerInfo {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.headerInfo li {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.headerInfo li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.icon {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.headerLeft {
+    display: flex;
+}
+
+.headerRight {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 10px;
+}

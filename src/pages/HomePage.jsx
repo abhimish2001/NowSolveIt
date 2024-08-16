@@ -2,6 +2,7 @@ import HeroSection from '../components/herosection/HeroSection';
 
 import Cards from '../components/cards/Cards';
 import FeaturedSection from '../components/coursecards/FeaturedSection';
+import AboutUs from '../components/aboutus/AboutUs';
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             <HeroSection />
             <FeaturedSection />
             <Cards />
+            <AboutUs />
         </div>
     );
 }

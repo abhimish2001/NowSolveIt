@@ -12,7 +12,6 @@ const CourseCard = ({ course }) => {
                 <p className={styles.courseDescription}>{description}</p>
                 <p className={styles.courseDuration}><strong>Duration:</strong> {duration}</p>
                 <p className={styles.coursePrice}><strong>Price:</strong> ${price}</p>
-                <button className={styles.enrollButton}>Enroll Now</button>
             </div>
         </div>
     );
