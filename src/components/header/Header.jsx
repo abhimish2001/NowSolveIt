@@ -1,8 +1,16 @@
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Header.module.css';
+import { useEffect } from 'react';
 
 function Header() {
     const location = useLocation();
+
+    // Ensure Bootstrap's JavaScript is loaded
+    useEffect(() => {
+        // This effect will run only on the first render
+        // Ensure that bootstrap's JavaScript is loaded
+        import('bootstrap/dist/js/bootstrap.bundle.min.js');
+    }, []);
 
     return (
         <nav className={`navbar navbar-expand-lg ${styles.navbarCustom}`}>
