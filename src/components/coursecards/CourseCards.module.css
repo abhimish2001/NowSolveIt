@@ -51,16 +51,19 @@
 }
 
 .enrollButton {
-    background-color: #ff6f61;
+    background-color: #fb9c05;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
+    text-decoration: none;
     border-radius: 20px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .enrollButton:hover {
-    background-color: #e65a50;
+    background-color: #fb9c05;
+    transform: scale(1.1);
+    /* Zoom in effect */
 }

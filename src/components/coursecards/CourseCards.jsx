@@ -12,6 +12,14 @@ const CourseCard = ({ course }) => {
                 <p className={styles.courseDescription}>{description}</p>
                 <p className={styles.courseDuration}><strong>Duration:</strong> {duration}</p>
                 <p className={styles.coursePrice}><strong>Price:</strong> ${price}</p>
+                <a
+                    href="https://forms.gle/iJHfMVZG9un24A7s6" // Replace with your Google Form link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.enrollButton}
+                >
+                    Enroll Now
+                </a>
             </div>
         </div>
     );

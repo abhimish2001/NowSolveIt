@@ -99,8 +99,8 @@
 /* Navigation Buttons */
 .prevButton,
 .nextButton {
-    background-color: rgba(251, 156, 5, 0.8);
-    color: white;
+    background-color: transparent;
+    color: black;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -123,12 +123,12 @@
 
 .prevButton:hover,
 .nextButton:hover {
-    background-color: rgba(251, 156, 5, 0.8);
+    background-color: transparent;
 }
 
 .prevButton:active,
 .nextButton:active {
-    background-color: rgba(251, 156, 5, 0.8);
+    background-color: transparent;
 }
 
 .enrollButton {

@@ -11,11 +11,11 @@ const Top = () => {
                         <ul className={styles.headerInfo}>
                             <li>
                                 <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-                                <a href="tel:919711598003">9711598003, 7678564277</a>
+                                <a href="tel:919711598003">xxxxxxxxxx, xxxxxxxxxx</a>
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-                                <a href="mailto:nishantacademy112@gmail.com">nishantacademy112@gmail.com</a>
+                                <a href="mailto:test@xyzil.com">test@xyz.com</a>
                             </li>
                         </ul>
                     </div>

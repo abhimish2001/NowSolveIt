@@ -1,15 +1,11 @@
 import { useState, useEffect } from "react";
-import WOW from "wowjs";
 import "animate.css/animate.min.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./ContactUs.module.css"; // Import the CSS module
 
 function ContactUs() {
-    useEffect(() => {
-        const wow = new WOW.WOW();
-        wow.init();
-    }, []);
+
 
     const [formData, setFormData] = useState({
         name: "",
@@ -27,6 +23,7 @@ function ContactUs() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try {
             const res = await fetch("/register", {
                 method: "POST",
@@ -37,18 +34,27 @@ function ContactUs() {
             });
 
             const data = await res.json();
+
             if (res.ok) {
                 toast.success("Email sent successfully!");
                 handleReset();
             } else {
-                toast.error("Failed to send email: " + data.message);
+                // Handle specific error codes or messages from the server
+                if (res.status === 400) {
+                    toast.error("Invalid data: " + data.message);
+                } else if (res.status === 500) {
+                    toast.error("Internal server error");
+                    // Consider logging the error to a centralized error tracking system
+                } else {
+                    toast.error("Failed to send email: " + data.message);
+                }
             }
         } catch (error) {
             console.error("Failed to send email", error);
-            toast.error("An error occurred while sending the email.");
+            toast.error("An unexpected error occurred. Please try again later.");
+            // Consider logging the error to a centralized error tracking system
         }
     };
-
     const handleReset = () => {
         setFormData({
             name: "",

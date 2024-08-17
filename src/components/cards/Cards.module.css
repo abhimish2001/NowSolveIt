@@ -1,19 +1,21 @@
 .heading {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
 }
 
 .cardSize {
     width: 300px;
-    height: 400px;
+    height: 500px;
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.5);
     /* Add light border */
     border-radius: 8px;
     /* Slight rounding of corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     /* Add box-shadow for depth */
     /* Ensure cards have a white background */
     transition: box-shadow 0.3s ease, transform 0.1s ease;
@@ -21,7 +23,7 @@
 }
 
 .cardImg {
-    height: 150px;
+    height: 200px;
     object-fit: contain;
     width: 100%;
 

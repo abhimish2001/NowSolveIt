@@ -6,7 +6,7 @@ import bootstrap from '../../assets/courseImg/bootstrap.png';
 import reactImg from '../../assets/courseImg/react.png';
 import dotnet from '../../assets/courseImg/csharp.png';
 import dbms from '../../assets/courseImg/dbms.jpeg';
-
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -63,16 +63,14 @@ function Cards() {
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="d-flex justify-content-center mt-4">
-                <a
-                    href="#" // Replace with your Google Form link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.exploreButton}
-                >
-                    Explore More
-                </a>
+                <div className="d-flex justify-content-center mt-4">
+                    <NavLink
+                        to="/courses" // Replace with your desired route path
+                        className={styles.exploreButton}
+                    >
+                        Explore More
+                    </NavLink>
+                </div>
             </div>
         </div>
     );

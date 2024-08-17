@@ -1,5 +1,4 @@
 function CoursesPage() {
-    return <>
-        <h1>Hello</h1></>
+    return
 }
 export default CoursesPage;

@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -14,10 +15,10 @@ function Footer() {
                     </div>
                     <div className="col-lg-4 mb-3 mb-lg-0">
                         <h5 className="text-uppercase">Quick Links</h5>
-                        <a href="#" className="text-light d-block mb-2">Home</a>
-                        <a href="#" className="text-light d-block mb-2">Courses</a>
-                        <a href="#" className="text-light d-block mb-2">Contact Us</a>
-                        <a href="#" className="text-light d-block mb-2">FAQs</a>
+                        <NavLink to="/home" className="text-light d-block mb-2" activeClassName="active-link">Home</NavLink>
+                        <NavLink to="/courses" className="text-light d-block mb-2" activeClassName="active-link">Courses</NavLink>
+                        <NavLink to="/contact" className="text-light d-block mb-2" activeClassName="active-link">Contact Us</NavLink>
+                        <NavLink to="/faqs" className="text-light d-block mb-2" activeClassName="active-link">FAQs</NavLink>
                     </div>
                     <div className="col-lg-4">
                         <h5 className="text-uppercase">Follow Us</h5>

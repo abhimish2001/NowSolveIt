@@ -11,6 +11,7 @@ function App() {
       <Top />
       <Header />
       <Routes>
+        <Route path="/home" element={<HomePage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/courses" element={<CoursePage />} />
         <Route path="/contact" element={<ContactUs />} />
