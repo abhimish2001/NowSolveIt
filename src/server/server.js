@@ -1,15 +1,17 @@
 const express = require("express");
-const server = express();
-const router = require("./routes/router");
 const cors = require("cors");
+const router = require("./routes/router");
 require("dotenv").config();
 
+const server = express();
 const port = 8006;
 
+// Middleware setup
+server.use(cors());
 server.use(express.json());
 server.use(router);
-server.use(cors());
 
+// Start server
 server.listen(port, () => {
-  console.log(`server start at port no  :${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });

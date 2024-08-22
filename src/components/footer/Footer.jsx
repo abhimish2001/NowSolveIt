@@ -22,16 +22,16 @@ function Footer() {
                     </div>
                     <div className="col-lg-4">
                         <h5 className="text-uppercase">Follow Us</h5>
-                        <a href="#" className="text-light mx-2">
+                        <a href="#" className="text-light mt-4 p-4">
                             <FontAwesomeIcon icon={faFacebookF} />
                         </a>
-                        <a href="#" className="text-light mx-2">
+                        <a href="#" className="text-light mt-4 p-4">
                             <FontAwesomeIcon icon={faTwitter} />
                         </a>
-                        <a href="#" className="text-light mx-2">
+                        <a href="#" className="text-light mt-4 p-4">
                             <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
-                        <a href="#" className="text-light mx-2">
+                        <a href="#" className="text-light mt-4 p-4">
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </div>

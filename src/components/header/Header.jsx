@@ -5,10 +5,8 @@ import { useEffect } from 'react';
 function Header() {
     const location = useLocation();
 
-    // Ensure Bootstrap's JavaScript is loaded
     useEffect(() => {
-        // This effect will run only on the first render
-        // Ensure that bootstrap's JavaScript is loaded
+
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
     }, []);
 
@@ -33,7 +31,7 @@ function Header() {
                     <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li className="nav-item mx-1 fs-5 fw-bold">
                             <Link
-                                className={`nav-link ${location.pathname === '/' ? styles.activeLink : ''}`}
+                                className={`nav-link ${location.pathname === '/home' ? styles.activeLink : ''}`}
                                 to="/home"
                             >
                                 Home

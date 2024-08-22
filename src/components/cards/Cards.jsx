@@ -29,7 +29,7 @@ const cardData = [
     },
     {
         imgSrc: dotnet,
-        title: '.NET',
+        title: 'C#',
     },
     {
         imgSrc: dbms,
@@ -41,24 +41,32 @@ const cardData = [
     },
     {
         imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png',
-        title: 'Python',
+        title: 'MongoDB',
     },
+    {
+        imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png',
+        title: 'C++',
+    },
+    {
+        imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png',
+        title: 'C',
+    }
 ];
 
 function Cards() {
     return (
-        <div className={`container-fluid ${styles.bgColor} py-5`}>
-            <h2 className={`text-center ${styles.heading}`}>Our Courses</h2>
+        <div className={`container-fluid ${styles.bgColor} pt-5 pb-4`}>
+            <h2 className={`text-center ${styles.heading}`}>Notes</h2>
             <div className="container mt-4">
-                <div className="row row-cols-1 row-cols-md-4 g-4">
+                <div className={`row row-cols-1 row-cols-md-5 g-4 ${styles.container}`}>
                     {cardData.map((card, index) => (
                         <div className="col" key={index}>
                             <div className={`card border-light shadow-sm ${styles.cardHover} ${styles.cardSize}`}>
                                 <img src={card.imgSrc} className={`card-img-top ${styles.cardImg}`} alt={card.title} />
                                 <div className={`card-body ${styles.cardBody}`}>
-                                    <h5 className={`card-title ${styles.cardTitle}`}>{card.title}</h5>
                                 </div>
                             </div>
+                            <h5 className={`card-title ${styles.cardTitle}`}>{card.title}</h5>
 
                         </div>
                     ))}

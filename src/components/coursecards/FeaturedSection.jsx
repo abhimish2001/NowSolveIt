@@ -7,7 +7,7 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 const FeaturedSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-    const totalCourses = 10; // Total number of courses
+    const totalCourses = 5; // Total number of courses
     const visibleCards = 5; // Cards visible in the row
 
     const courses = [
@@ -19,7 +19,7 @@ const FeaturedSection = () => {
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
         },
         {
-            name: "Backend Development ..",
+            name: "Backend Development",
             price: 249,
             duration: "10 Weeks",
             description: "Learn server-side development with Node.js, Express, and databases for scalable apps.",
@@ -33,54 +33,27 @@ const FeaturedSection = () => {
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
         },
         {
-            name: "MERN Stack Development",
+            name: "MERN",
             price: 299,
             duration: "12 Weeks",
             description: "Build full-stack applications using MongoDB, Express, React, and Node.js (MERN stack).",
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
         },
         {
-            name: "Dotnet Development (.Net)",
+            name: "Dotnet Development",
             price: 299,
             duration: "12 Weeks",
             description: "Become proficient in .NET framework to develop enterprise-level applications.",
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
         },
         {
-            name: "Python Programming",
-            price: 199,
-            duration: "8 Weeks",
-            description: "Master the basics of Python programming and apply it in web development and data science.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "JavaScript Development",
-            price: 249,
-            duration: "10 Weeks",
-            description: "Advance your JavaScript skills and learn modern frameworks for web development.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "Data Structures & Algorithms",
-            price: 199,
-            duration: "10 Weeks",
-            description: "Build a strong foundation in data structures and algorithms for coding interviews.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "DevOps & CI/CD ...",
-            price: 299,
-            duration: "10 Weeks",
-            description: "Learn how to automate software delivery and improve efficiency with CI/CD pipelines.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "Cloud Computing with AWS",
+            name: "Dotnet Development",
             price: 299,
             duration: "12 Weeks",
-            description: "Develop a deep understanding of AWS services and build scalable cloud applications.",
+            description: "Become proficient in .NET framework to develop enterprise-level applications.",
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        }
+        },
+
     ];
 
 
@@ -111,7 +84,7 @@ const FeaturedSection = () => {
     };
 
     return (
-        <div className="container">
+        <div className="container-fluid">
             <h1 className="text-center mb-4 mt-4 fw-bold">Featured Courses</h1>
 
             <div className="position-relative">

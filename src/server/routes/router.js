@@ -1,7 +1,8 @@
 const express = require("express");
-const router = new express.Router();
+const router = express.Router();
 const nodemailer = require("nodemailer");
 
+// POST /register route
 router.post("/register", (req, res) => {
   const { name, email, message } = req.body;
 
@@ -14,34 +15,43 @@ router.post("/register", (req, res) => {
     },
   });
 
-  // Email options
-  const mailOptions = {
-    replyTo: `${email}`,
-    to: `abhimish2001@gmail.com`,
-    subject: `Query from ${name}`,
-    html: `<p>Hi Yatinidhi,</p><br/><p>${message}</p><br/><br/><p style="font-weight:bold;text-decoration:underline;">User Details</P><p>User Name: ${name}</p><p>e-mail Id: ${email}</p>
-    
-    
-    `,
-  };
-
-  // Send email
-  transporter.sendMail(mailOptions, (error, info) => {
+  // Verify the connection configuration
+  transporter.verify((error, success) => {
     if (error) {
-      console.log("Error", error);
-      res.status(500).json({
+      console.error("Error with transporter:", error);
+      return res.status(500).json({
         status: "error",
-        message: "Failed to send email.",
+        message: "Failed to initialize email transporter.",
         error: error,
       });
-    } else {
+    }
+    console.log("Server is ready to send emails!");
+
+    // Email options
+    const mailOptions = {
+      replyTo: email,
+      to: "abhimish2001@gmail.com",
+      subject: `Query from ${name}`,
+      html: `<p>Hi Yatinidhi,</p><br/><p>${message}</p><br/><br/><p style="font-weight:bold;text-decoration:underline;">User Details</p><p>User Name: ${name}</p><p>Email Id: ${email}</p>`,
+    };
+
+    // Send email
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error("Error sending email:", error);
+        return res.status(500).json({
+          status: "error",
+          message: "Failed to send email.",
+          error: error,
+        });
+      }
       console.log("Email sent: " + info.response);
-      res.status(200).json({
+      return res.status(200).json({
         status: "success",
         message: "Email successfully sent!",
         info: info,
       });
-    }
+    });
   });
 });
 
