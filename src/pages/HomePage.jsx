@@ -1,8 +1,8 @@
 import HeroSection from '../components/herosection/HeroSection';
-import Testimonial from '../components/testimonials/Testimonial';
 import Cards from '../components/cards/Cards';
 import FeaturedSection from '../components/coursecards/FeaturedSection';
 import AboutUs from '../components/aboutus/AboutUs';
+import TestimonialSection from '../components/testimonials/TestimonialSection';
 
 function App() {
     return (
@@ -11,7 +11,7 @@ function App() {
             <FeaturedSection />
             <Cards />
             <AboutUs />
-            <Testimonial />
+            <TestimonialSection />
         </div>
     );
 }

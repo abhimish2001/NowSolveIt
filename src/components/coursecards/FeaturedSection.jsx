@@ -5,74 +5,40 @@ import styles from './FeaturedSection.module.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const FeaturedSection = () => {
+    const [courses, setCourses] = useState([]); // State to hold the courses fetched from the API
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-    const totalCourses = 5; // Total number of courses
-    const visibleCards = 5; // Cards visible in the row
-
-    const courses = [
-        {
-            name: "Frontend Development",
-            price: 199,
-            duration: "8 Weeks",
-            description: "Master HTML, CSS, and JavaScript to build beautiful websites and responsive UIs.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "Backend Development",
-            price: 249,
-            duration: "10 Weeks",
-            description: "Learn server-side development with Node.js, Express, and databases for scalable apps.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "Full Stack Development",
-            price: 299,
-            duration: "12 Weeks",
-            description: "Gain skills in frontend and backend technologies to build fully functional web apps.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "MERN",
-            price: 299,
-            duration: "12 Weeks",
-            description: "Build full-stack applications using MongoDB, Express, React, and Node.js (MERN stack).",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "Dotnet Development",
-            price: 299,
-            duration: "12 Weeks",
-            description: "Become proficient in .NET framework to develop enterprise-level applications.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-        {
-            name: "Dotnet Development",
-            price: 299,
-            duration: "12 Weeks",
-            description: "Become proficient in .NET framework to develop enterprise-level applications.",
-            image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNDYV-2Wzdq5gaHKhkTp_viMt0M81dTTnikA&usqp=CAU'
-        },
-
-    ];
-
-
+    const visibleCards = 6; // Cards visible in the row
 
     useEffect(() => {
-        if (!isPaused) {
+        // Fetch the courses from the API
+        fetch('http://localhost:4001/courses')
+            .then(response => response.json())
+            .then(data => {
+                setCourses(data.courses); // Assuming your API response has a "courses" field
+            })
+            .catch(error => console.error('Error fetching courses:', error));
+    }, []);
+
+    useEffect(() => {
+        if (courses.length > visibleCards && !isPaused) {
             const interval = setInterval(() => {
                 handleNext();
             }, 3000); // Slide every 3 seconds
             return () => clearInterval(interval); // Cleanup on unmount
         }
-    }, [isPaused, currentIndex]);
+    }, [isPaused, currentIndex, courses.length]);
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? totalCourses - visibleCards : prevIndex - 1));
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? courses.length - visibleCards : prevIndex - 1
+        );
     };
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === totalCourses - visibleCards ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) =>
+            prevIndex === courses.length - visibleCards ? 0 : prevIndex + 1
+        );
     };
 
     const handleMouseEnter = () => {
@@ -88,9 +54,11 @@ const FeaturedSection = () => {
             <h1 className="text-center mb-4 mt-4 fw-bold">Featured Courses</h1>
 
             <div className="position-relative">
-                <button className={styles.prevButton} onClick={handlePrev}>
-                    <FaArrowLeft />
-                </button>
+                {courses.length > visibleCards && (
+                    <button className={styles.prevButton} onClick={handlePrev}>
+                        <FaArrowLeft />
+                    </button>
+                )}
 
                 <div className="d-flex overflow-hidden" style={{ width: "100%" }}>
                     <div
@@ -110,12 +78,12 @@ const FeaturedSection = () => {
                     </div>
                 </div>
 
-                <button className={styles.nextButton} onClick={handleNext}>
-                    <FaArrowRight />
-                </button>
+                {courses.length > visibleCards && (
+                    <button className={styles.nextButton} onClick={handleNext}>
+                        <FaArrowRight />
+                    </button>
+                )}
             </div>
-
-
         </div>
     );
 };

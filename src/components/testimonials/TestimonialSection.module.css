@@ -1,0 +1,19 @@
+.testimonialSection {
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.slider {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.slick-slide {
+    padding: 0 15px;
+
+}
+
+.slick-list {
+    margin: 0 -15px;
+}

@@ -23,7 +23,7 @@ const Top = () => {
                         <ul className={styles.headerInfo}>
                             <li>
                                 <FontAwesomeIcon icon={faClock} className={styles.icon} />
-                                <span>Mon - Sat: 09:00am To 07:00pm</span>
+                                <span className='mx-2'> Mon - Sat: 09:00am To 07:00pm</span>
                             </li>
                         </ul>
                     </div>
