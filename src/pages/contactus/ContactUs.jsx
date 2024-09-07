@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import WOW from 'wowjs';
 import styles from './ContactUs.module.css';
 
 const ContactUs = () => {
@@ -11,10 +10,6 @@ const ContactUs = () => {
     message: '',
   });
 
-  useEffect(() => {
-    new WOW.WOW().init();
-  }, []);
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -23,23 +18,44 @@ const ContactUs = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!formData.name || !formData.email || !formData.message) {
       toast.error('Please fill in all fields!');
       return;
     }
-    toast.success('Message sent successfully!');
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+
+    try {
+      // Make POST request to your server
+      const response = await fetch('http://localhost:8006/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        toast.success('Message sent successfully!');
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      } else {
+        toast.error('Failed to send message. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      toast.error('Error sending message. Please try again.');
+    }
   };
 
+
   return (
-    <div className={`${styles.contactForm} wow fadeIn`} data-wow-duration="1s">
-      <h2 className={`${styles.heading} wow fadeInUp`}>Contact Us</h2>
+    <div className={styles.contactForm}>
+      <h2 className={styles.heading}>Contact Us</h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <div className={styles.formGroup}>
           <input
@@ -48,8 +64,7 @@ const ContactUs = () => {
             placeholder="Your Name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`${styles.input} wow fadeInLeft`}
-            data-wow-duration="1s"
+            className={styles.input}
             required
           />
         </div>
@@ -60,8 +75,7 @@ const ContactUs = () => {
             placeholder="Your Email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`${styles.input} wow fadeInRight`}
-            data-wow-duration="1s"
+            className={styles.input}
             required
           />
         </div>
@@ -71,17 +85,16 @@ const ContactUs = () => {
             placeholder="Your Message"
             value={formData.message}
             onChange={handleInputChange}
-            className={`${styles.textarea} wow fadeInUp`}
-            data-wow-duration="1s"
+            className={styles.textarea}
             required
           ></textarea>
         </div>
-        <button type="submit" className={`${styles.submitBtn} wow fadeInUp`} data-wow-duration="1s">
+        <button type="submit" className={styles.submitBtn}>
           Send Message
         </button>
       </form>
       <ToastContainer
-        position="top-center"  // Center horizontally
+        position="top-center"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}

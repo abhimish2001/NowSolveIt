@@ -15,10 +15,10 @@ function Footer() {
                     </div>
                     <div className="col-lg-4 mb-3 mb-lg-0">
                         <h5 className="text-uppercase">Quick Links</h5>
-                        <NavLink to="/home" className="text-light d-block mb-2" activeClassName="active-link">Home</NavLink>
-                        <NavLink to="/courses" className="text-light d-block mb-2" activeClassName="active-link">Courses</NavLink>
-                        <NavLink to="/contact" className="text-light d-block mb-2" activeClassName="active-link">Contact Us</NavLink>
-                        <NavLink to="/faqs" className="text-light d-block mb-2" activeClassName="active-link">FAQs</NavLink>
+                        <NavLink to="/home" className="text-light d-block mb-2" activeclassname="active-link">Home</NavLink>
+                        <NavLink to="/courses" className="text-light d-block mb-2" activeclassname="active-link">Courses</NavLink>
+                        <NavLink to="/contact" className="text-light d-block mb-2" activeclassname="active-link">Contact Us</NavLink>
+                        <NavLink to="/faqs" className="text-light d-block mb-2" activeclassname="active-link">FAQs</NavLink>
                     </div>
                     <div className="col-lg-4">
                         <h5 className="text-uppercase">Follow Us</h5>
