@@ -2,6 +2,7 @@
     background-size: cover;
     background-position: center;
     height: 500px;
+    /* Base height for large screens */
     padding: 50px 0;
     display: flex;
     align-items: center;
@@ -13,96 +14,7 @@
 
 .heroTextContainer {
     background-color: rgba(251, 156, 5, 0.5);
-
-    /* General styles for the hero section */
-    .hero {
-        background-image: url('your-image-path.jpg');
-        /* Add your image path */
-        background-size: cover;
-        /* Ensures image covers the entire section */
-        background-position: center;
-        height: 500px;
-        /* You can adjust this height */
-        padding: 50px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        position: relative;
-        color: white;
-    }
-
-    /* Container for hero text */
-    .heroTextContainer {
-        background-color: rgba(0, 0, 0, 0.6);
-        /* Semi-transparent black background */
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    /* Styles for the main heading */
-    .hero h1 {
-        font-size: 3rem;
-        font-weight: 400;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        /* Shadow for text clarity */
-    }
-
-    /* Styles for the hero section paragraph */
-    .hero p {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        /* Shadow for text clarity */
-    }
-
-    /* Button styling */
-    .btn {
-        font-size: 1.25rem;
-        padding: 10px 20px;
-        color: white;
-        background-color: #007bff;
-        /* Bootstrap blue */
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-        background-color: #0056b3;
-        /* Darken blue on hover */
-    }
-
-    /* Media Queries for Responsive Design */
-    @media (max-width: 768px) {
-        .hero {
-            height: 300px;
-            /* Adjust height for smaller screens */
-            background-size: cover;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-            /* Reduce font size for smaller screens */
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            /* Reduce font size for smaller screens */
-        }
-    }
-
-    /* Parallax Effect (Optional) */
-    .hero-parallax {
-        background-attachment: fixed;
-        /* Creates a parallax effect */
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* Semi-transparent black background */
+    /* Semi-transparent background for better text visibility */
     padding: 20px;
     border-radius: 10px;
 }
@@ -112,17 +24,77 @@
     font-weight: 400;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    /* Add shadow for extra clarity */
+    /* Text shadow for better readability on image */
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    /* Add shadow for extra clarity */
+    /* Text shadow for better readability */
 }
 
-.btn {
-    font-size: 1.25rem;
-    padding: 10px 20px;
+/* Responsive Adjustments for Tablets */
+@media (max-width: 992px) {
+    .hero {
+        height: 400px;
+        /* Reduce height for tablets */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        /* Reduce heading size */
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        /* Reduce paragraph size */
+    }
+}
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+    .hero {
+        height: 350px;
+        /* Adjust height for mobile */
+        padding: 30px 0;
+    }
+
+    .heroTextContainer {
+        padding: 15px;
+        /* Reduce padding for mobile */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        /* Further reduce heading size */
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        /* Adjust paragraph size */
+    }
+}
+
+/* Extra Small Mobile Screens */
+@media (max-width: 576px) {
+    .hero {
+        height: 300px;
+        /* Smaller height for extra small screens */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        /* Small heading size */
+    }
+
+    .hero p {
+        font-size: 1rem;
+        /* Small paragraph size */
+    }
+
+    .heroTextContainer {
+        padding: 10px;
+        /* Reduce padding for very small devices */
+    }
 }

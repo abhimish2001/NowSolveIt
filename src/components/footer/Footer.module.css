@@ -1,0 +1,43 @@
+.footer {
+    background-color: #343a40;
+    /* Dark background for the footer */
+}
+
+.link {
+    text-decoration: none;
+    /* Remove underline from links */
+    font-weight: 500;
+    /* Slightly bolder text */
+}
+
+.activeLink {
+    font-weight: 700;
+    /* Make active link bold */
+    border-bottom: 2px solid #fb9c05;
+    /* Orange underline for active link */
+}
+
+.socialIcon {
+    font-size: 1.5rem;
+    /* Increase icon size */
+    margin: 0 10px;
+    /* Space between icons */
+    transition: color 0.3s ease;
+}
+
+.socialIcon:hover {
+    color: #fb9c05;
+    /* Change icon color on hover */
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 1rem;
+        /* Adjust padding for smaller screens */
+    }
+
+    .socialIcon {
+        font-size: 1.2rem;
+        /* Adjust icon size for smaller screens */
+    }
+}

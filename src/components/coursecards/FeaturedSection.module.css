@@ -1,150 +1,113 @@
-/* Updated container styles */
-.container {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    padding: 30px;
-}
-
-/* Heading Styling */
-.headingContainer {
-    background: linear-gradient(135deg, #ff6f61, #ff3e36);
+/* Base styles for the section */
+.container-fluid {
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    margin-bottom: 30px;
 }
 
-/* Cards Container */
-.cardsContainer {
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Styling for the carousel container */
+.position-relative {
+    position: relative;
+    overflow: hidden;
+}
+
+.d-flex {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
-/* Card Styles */
-.card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    flex: 1 1 18%;
-    /* Enforce fixed height */
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* Course card container styling */
+.col-2 {
+    flex: 1 0 16.66%;
+    /* 1/6 of the width */
+    padding: 10px;
 }
 
-/* Adjust image height to keep cards uniform */
-.card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* Card Content */
-.card h3 {
-    font-size: 1.25rem;
-    margin: 10px 0;
-    flex: 0 1 auto;
-    min-height: 60px;
-    /* Ensure title consistency */
-}
-
-.card p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    flex: 1 1 auto;
-    /* Allow descriptions to fill the remaining space */
-}
-
-.card .price {
-    font-weight: bold;
-    margin: 15px 0;
-    flex: 0 1 auto;
-}
-
-/* Button with consistent size and placement */
-.card .btn {
-    background-color: transparent;
-    color: #fb9c05;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    flex: 0 1 auto;
-}
-
-.card .btn:hover {
-    background-color: rgba(251, 156, 5, 0.8);
-}
-
-/* Hover Effects */
-.card:hover {
-    transform: translateY(-10px);
-}
-
-/* Navigation Buttons */
+/* Scroll buttons */
 .prevButton,
 .nextButton {
+    display: none;
+    /* Hide by default */
     background-color: transparent;
-    color: black;
     border: none;
-    padding: 10px 20px;
-    cursor: pointer;
+    color: black;
     font-size: 2rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    padding: 10px;
+    cursor: pointer;
     z-index: 1;
     outline: none;
-    transition: background-color 0.3s ease, opacity 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.prevButton {
-    left: 10px;
+/* Show buttons on mobile view (below 768px) */
+@media (max-width: 768px) {
+
+    .prevButton,
+    .nextButton {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 10px 15px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .prevButton {
+        left: 10px;
+    }
+
+    .nextButton {
+        right: 10px;
+    }
+
+    .prevButton:hover,
+    .nextButton:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
 }
 
-.nextButton {
-    right: 10px;
+/* Card hover effects */
+.col-2:hover .courseCard {
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    transition: transform 0.3s ease-in-out;
 }
 
-.prevButton:hover,
-.nextButton:hover {
-    background-color: transparent;
+/* Card transition for smoother movement */
+.transition-transform {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.prevButton:active,
-.nextButton:active {
-    background-color: transparent;
+/* Card responsiveness */
+@media (max-width: 1200px) {
+    .col-2 {
+        flex: 1 0 20%;
+        /* 1/5 of the width */
+    }
 }
 
-.enrollButton {
-    background-color: #fb9c05;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 20px;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+@media (max-width: 992px) {
+    .col-2 {
+        flex: 1 0 25%;
+        /* 1/4 of the width */
+    }
 }
 
-.enrollButton:hover {
-    background-color: #fb9c05;
-    transform: scale(1.1);
-    /* Zoom in effect */
+@media (max-width: 768px) {
+    .col-2 {
+        flex: 1 0 33.33%;
+        /* 1/3 of the width */
+    }
+}
+
+@media (max-width: 576px) {
+    .col-2 {
+        flex: 1 0 50%;
+        /* 1/2 of the width */
+    }
 }

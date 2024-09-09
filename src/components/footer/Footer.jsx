@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { NavLink } from 'react-router-dom';
+import styles from './Footer.module.css';  // Import CSS module for custom styling
 
 function Footer() {
     return (
-        <footer className="bg-dark text-light py-5">
+        <footer className={`bg-dark text-light py-5 ${styles.footer}`}>
             <div className="container text-center">
                 <div className="row mb-4">
                     <div className="col-lg-4 mb-3 mb-lg-0">
@@ -15,23 +16,23 @@ function Footer() {
                     </div>
                     <div className="col-lg-4 mb-3 mb-lg-0">
                         <h5 className="text-uppercase">Quick Links</h5>
-                        <NavLink to="/home" className="text-light d-block mb-2" activeclassname="active-link">Home</NavLink>
-                        <NavLink to="/courses" className="text-light d-block mb-2" activeclassname="active-link">Courses</NavLink>
-                        <NavLink to="/contact" className="text-light d-block mb-2" activeclassname="active-link">Contact Us</NavLink>
-                        <NavLink to="/faqs" className="text-light d-block mb-2" activeclassname="active-link">FAQs</NavLink>
+                        <NavLink to="/home" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>Home</NavLink>
+                        <NavLink to="/courses" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>Courses</NavLink>
+                        <NavLink to="/contact" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>Contact Us</NavLink>
+                        <NavLink to="/faqs" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>FAQs</NavLink>
                     </div>
                     <div className="col-lg-4">
                         <h5 className="text-uppercase">Follow Us</h5>
-                        <a href="#" className="text-light mt-4 p-4">
+                        <a href="#" className={`text-light ${styles.socialIcon}`}>
                             <FontAwesomeIcon icon={faFacebookF} />
                         </a>
-                        <a href="#" className="text-light mt-4 p-4">
+                        <a href="#" className={`text-light ${styles.socialIcon}`}>
                             <FontAwesomeIcon icon={faTwitter} />
                         </a>
-                        <a href="#" className="text-light mt-4 p-4">
+                        <a href="#" className={`text-light ${styles.socialIcon}`}>
                             <FontAwesomeIcon icon={faLinkedinIn} />
                         </a>
-                        <a href="#" className="text-light mt-4 p-4">
+                        <a href="#" className={`text-light ${styles.socialIcon}`}>
                             <FontAwesomeIcon icon={faInstagram} />
                         </a>
                     </div>

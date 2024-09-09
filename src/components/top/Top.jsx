@@ -11,22 +11,22 @@ const Top = () => {
                         <ul className={styles.headerInfo}>
                             <li>
                                 <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-                                <a href="tel:919711598003">xxxxxxxxxx, xxxxxxxxxx</a>
+                                <a href="tel:01234567897">8865745689, 7897475542</a>
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-                                <a href="mailto:test@xyzil.com">test@xyz.com</a>
+                                <a href="mailto:info@nowsolveit.com">info@nowsolveit.com</a>
                             </li>
                         </ul>
                     </div>
-                    <div className={styles.headerRight}>
+                    {/*<div className={styles.headerRight}>
                         <ul className={styles.headerInfo}>
                             <li>
                                 <FontAwesomeIcon icon={faClock} className={styles.icon} />
                                 <span className='mx-2'> Mon - Sat: 09:00am To 07:00pm</span>
                             </li>
                         </ul>
-                    </div>
+                    </div>*/}
                 </div>
             </div>
         </div>

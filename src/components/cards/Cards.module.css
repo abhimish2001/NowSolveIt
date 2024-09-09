@@ -3,8 +3,8 @@
     font-weight: bold;
     color: black;
     margin-bottom: 20px;
+    text-align: center;
 }
-
 
 .cardSize {
     width: 200px;
@@ -16,6 +16,8 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: box-shadow 0.3s ease, transform 0.1s ease;
+    text-align: center;
+    position: relative;
 }
 
 .cardImg {
@@ -23,16 +25,15 @@
     width: 100px;
     object-fit: contain;
     padding: 5px;
-
-
+    display: block;
+    margin: 0 auto;
 }
 
 .cardBody {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    justify-content: center;
 }
 
 .cardTitle {
@@ -40,34 +41,19 @@
     font-weight: bold;
     color: #333;
     text-align: center;
-    margin-bottom: 0.75rem;
+    margin: 0.75rem 0;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-
-
 .cardHover:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Increase shadow on hover */
-}
-
-@media (max-width: 768px) {
-    .cardSize {
-        width: 90%;
-        height: auto;
-    }
-
-    .cardImg {
-        height: 250px;
-    }
 }
 
 .bgColor {
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.1);
-
 }
 
 .exploreButton {
@@ -77,12 +63,52 @@
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    display: inline-block;
 }
 
 .exploreButton:hover {
     background-color: #fb9c05;
     transform: scale(1.1);
+}
+
+/* Styles for horizontal card display on mobile view */
+@media (max-width: 768px) {
+    .container {
+        overflow-x: auto;
+        /* Allow horizontal scrolling */
+    }
+
+    .row {
+        flex-direction: row;
+        /* Arrange cards in a row */
+    }
+
+    .col {
+        flex: 0 0 auto;
+        /* Prevent columns from shrinking */
+        margin-right: 10px;
+        /* Space between cards */
+    }
+
+    .cardSize {
+        width: 150px;
+        /* Adjust width for mobile view */
+        height: auto;
+        /* Adjust height for mobile view */
+    }
+
+    .cardImg {
+        height: 120px;
+        /* Adjust image height for mobile view */
+    }
+
+    .exploreButton {
+        font-size: 0.9rem;
+        /* Adjust button font size */
+        padding: 8px 16px;
+        /* Adjust button padding */
+    }
 }
