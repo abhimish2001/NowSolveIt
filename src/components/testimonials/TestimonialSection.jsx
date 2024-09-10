@@ -31,31 +31,7 @@ const testimonials = [
     contact: "ravishankar056@gmail.com",
     review: "The course was incredibly beneficial. The instructors were expert and provided useful feedback that helped me advance my skills."
   },
-  {
-    name: "Amit Sharma",
-    contact: "amit.sharma@example.com",
-    review: "The course exceeded my expectations. The content was engaging, and the support from the instructors was outstanding."
-  },
-  {
-    name: "Priya Singh",
-    contact: "priya.singh@example.com",
-    review: "An exceptional learning experience! The course was well-organized, and the feedback from the instructors was always constructive."
-  },
-  {
-    name: "Ravi Patel",
-    contact: "ravi.patel@example.com",
-    review: "A highly valuable program with excellent resources. The instructors were attentive, and the practical content was very useful."
-  },
-  {
-    name: "Sanya Verma",
-    contact: "sanya.verma@example.com",
-    review: "Fantastic course! The structured approach and interactive elements made the learning process both enjoyable and effective."
-  },
-  {
-    name: "Rajesh Kumar",
-    contact: "rajesh.kumar@example.com",
-    review: "A great experience overall. The course was well-organized, and the support provided was exceptional. Highly recommended!"
-  }
+
 ];
 
 

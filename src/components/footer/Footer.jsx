@@ -14,7 +14,7 @@ function Footer() {
 
 
     return (
-        <footer className={`bg-dark text-light py-5 ${styles.footer}`}>
+        <footer className={`bg-dark text-light pt-5 ${styles.footer}`}>
             <div className="container text-center">
                 <div className="row mb-4">
                     <div className="col-lg-4 mb-3 mb-lg-0">
