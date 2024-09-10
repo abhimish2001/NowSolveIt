@@ -1,17 +1,14 @@
-import { useState, useEffect } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
 import CourseCard from '../coursecards/CourseCards';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import styles from './FeaturedSection.module.css';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const FeaturedSection = () => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isPaused, setIsPaused] = useState(false);
-    const visibleCards = 6;
-
     const courses = [
         {
-
             name: "Frontend",
             price: 199,
             duration: "8 Weeks",
@@ -52,72 +49,68 @@ const FeaturedSection = () => {
             duration: "10 Weeks",
             description: "Learn relational database management systems to effectively manage data.",
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdzPg6woox3CU85IZ3RhNszv6d4s2gzLnRw&s'
-        },
-
-    ];
-
-    useEffect(() => {
-        if (courses.length > visibleCards && !isPaused) {
-            const interval = setInterval(() => {
-                handleNext();
-            }, 3000); // Auto-scroll every 3 seconds
-
-            return () => clearInterval(interval); // Cleanup on unmount
         }
-    }, [isPaused, currentIndex, courses.length]);
-
-    const handlePrev = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? courses.length - visibleCards : prevIndex - 1
+    ];
+    const NextArrow = ({ onClick }) => {
+        return (
+            <div className={`${styles.arrow} ${styles.nextArrow}`} onClick={onClick}>
+                <FaArrowRight />
+            </div>
         );
     };
 
-    const handleNext = () => {
-        setCurrentIndex((prevIndex) =>
-            prevIndex === courses.length - visibleCards ? 0 : prevIndex + 1
+    const PrevArrow = ({ onClick }) => {
+        return (
+            <div className={`${styles.arrow} ${styles.prevArrow}`} onClick={onClick}>
+                <FaArrowLeft />
+            </div>
         );
     };
 
-    const handleMouseEnter = () => {
-        setIsPaused(true); // Pause auto-scroll on hover
-    };
-
-    const handleMouseLeave = () => {
-        setIsPaused(false); // Resume auto-scroll on mouse leave
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 5, // Show 4 cards per row
+        slidesToScroll: 1, // Scroll one card at a time
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
+        autoplay: true, // Enable auto-sliding
+        autoplaySpeed: 3000, // Slide every 3 seconds
+        pauseOnHover: true, // Pause on hover
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                },
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
     };
 
     return (
-        <div className="container-fluid ">
+        <div className="container-fluid">
             <h1 className="text-center mb-4 mt-4 fw-bold">Our Featured Courses</h1>
-
-            <div className="position-relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                {courses.length > visibleCards && (
-                    <button className={styles.prevButton} onClick={handlePrev}>
-                        <FaArrowLeft />
-                    </button>
-                )}
-
-                <div className="d-flex overflow-hidden" style={{ width: "100%" }}>
-                    <div
-                        className={`${styles.transitionTransform} d-flex`}
-                        style={{
-                            transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-                            transition: "transform 0.5s ease-in-out"
-                        }}
-                    >
-                        {courses.map((course, index) => (
-                            <div key={index} className="col-6 col-sm-4 col-md-3 col-lg-2">
-                                <CourseCard course={course} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {courses.length > visibleCards && (
-                    <button className={styles.nextButton} onClick={handleNext}>
-                        <FaArrowRight />
-                    </button>
-                )}
+            <div className={styles.sliderContainer}>
+                <Slider {...settings}>
+                    {courses.map((course, index) => (
+                        <div key={index} className={styles.cardWrapper}>
+                            <CourseCard course={course} />
+                        </div>
+                    ))}
+                </Slider>
             </div>
         </div>
     );
