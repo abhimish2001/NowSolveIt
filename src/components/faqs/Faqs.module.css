@@ -1,20 +1,50 @@
 .faqSection {
-    padding: 60px 20px;
-    background-color: #f9f9f9;
+    padding: 40px 20px;
+    /* Reduced padding for a more compact look */
+    background-color: #fff;
+    /* Use white background to match modal */
+    border-radius: 8px;
+    /* Rounded corners to match modal styling */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow for a lifted effect */
+    max-height: 80vh;
+    /* Ensure it fits well within the viewport height */
+    overflow-y: auto;
+    /* Enable scrolling if content overflows */
 }
 
 .faqItem {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    /* Adjusted spacing for better readability */
 }
 
 .faqTitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    /* Reduced font size for better consistency */
+    font-weight: 600;
+    /* Semi-bold text for section titles */
     color: #333;
+    /* Darker color for better readability */
     margin-bottom: 10px;
+    /* Spacing between title and text */
 }
 
 .faqText {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    /* Adjusted font size for readability */
     color: #666;
+    /* Light gray color for text */
     line-height: 1.6;
+    /* Line height for better text spacing */
+}
+
+.faqsTitle {
+    font-size: 2rem;
+    /* Adjusted font size for consistency */
+    font-weight: 700;
+    /* Bold text for the section heading */
+    color: #fb9c05;
+    /* Consistent color with the footer */
+    margin-bottom: 20px;
+    /* Margin for spacing below the title */
 }

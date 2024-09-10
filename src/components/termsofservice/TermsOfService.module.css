@@ -1,36 +1,60 @@
+/* Terms of Service */
 .termsOfService {
-    padding: 60px;
-    background-color: #f9f9f9;
+    padding: 40px 20px;
+    /* Adjusted padding for consistency */
+    background-color: #fff;
+    /* Use white background to match FAQs */
     border-radius: 8px;
+    /* Rounded corners */
     color: #333;
-    font-size: 1.1rem;
+    /* Darker text color */
+    font-size: 1rem;
+    /* Consistent font size */
     line-height: 1.6;
+    /* Line height for better readability */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Shadow effect */
+    max-height: 80vh;
+    /* Ensure it fits within the viewport */
+    overflow-y: auto;
+    /* Scroll if content overflows */
 }
 
 .title {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2rem;
+    /* Consistent font size */
+    font-weight: 700;
+    /* Bold text */
     color: #fb9c05;
+    /* Consistent color */
     margin-bottom: 20px;
+    /* Spacing below title */
 }
 
 .sectionTitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    /* Reduced font size */
     margin-top: 30px;
+    /* Margin above section title */
     color: #333;
-    font-weight: bold;
+    /* Darker text color */
+    font-weight: 600;
+    /* Semi-bold text */
 }
 
 .text {
     margin-bottom: 15px;
+    /* Spacing below text */
 }
 
 .list {
     list-style-type: disc;
+    /* Disc bullet points */
     margin-left: 20px;
+    /* Margin for indentation */
 }
 
 .listItem {
     margin-bottom: 10px;
+    /* Spacing between list items */
 }

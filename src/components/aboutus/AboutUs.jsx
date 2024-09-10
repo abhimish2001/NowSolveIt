@@ -2,7 +2,7 @@ import styles from './AboutUs.module.css';
 
 const AboutUs = () => {
     return (
-        <div className={styles.aboutUsSection}>
+        <div className={`${styles.aboutUsSection}`}>
             <div className={`container-fluid ${styles.aboutUsCard}`}>
                 <h2 className={styles.title}>About Us</h2>
                 <p className={styles.subtitle}>

@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 const Faqs = () => {
     return (
         <div className={`container ${styles.faqSection}`}>
-            <h2>Frequently Asked Questions (FAQs)</h2>
+            <h2 className={styles.faqsTitle}>Frequently Asked Questions (FAQs)</h2>
 
             <div className={styles.faqItem}>
                 <h3 className={styles.faqTitle}>Do I need to create an account to access NowSolveIt services?</h3>
