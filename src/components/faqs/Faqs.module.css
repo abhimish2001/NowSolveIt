@@ -1,0 +1,20 @@
+.faqSection {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.faqItem {
+    margin-bottom: 30px;
+}
+
+.faqTitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.faqText {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}

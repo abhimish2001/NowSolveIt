@@ -1,0 +1,36 @@
+.privacyPolicy {
+    padding: 60px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fb9c05;
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #333;
+    font-weight: bold;
+}
+
+.text {
+    margin-bottom: 15px;
+}
+
+.list {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.listItem {
+    margin-bottom: 10px;
+}

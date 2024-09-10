@@ -7,10 +7,11 @@ import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 const FeaturedSection = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
-    const visibleCards = 6; // Cards visible in the row
+    const visibleCards = 6;
 
     const courses = [
         {
+
             name: "Frontend",
             price: 199,
             duration: "8 Weeks",
@@ -28,7 +29,7 @@ const FeaturedSection = () => {
             name: "Full Stack",
             price: 299,
             duration: "12 Weeks",
-            description: "Gain skills in frontend and backend technologies to build fully functional web apps.",
+            description: "Gain skills in frontend and backend technologies to build fully functional web.",
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx37pHeJnzuPi0sFXFKHNNPdQ0CBRN6ed_Uw&s'
         },
         {
@@ -51,7 +52,8 @@ const FeaturedSection = () => {
             duration: "10 Weeks",
             description: "Learn relational database management systems to effectively manage data.",
             image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdzPg6woox3CU85IZ3RhNszv6d4s2gzLnRw&s'
-        }
+        },
+
     ];
 
     useEffect(() => {
@@ -85,8 +87,8 @@ const FeaturedSection = () => {
     };
 
     return (
-        <div className="container-fluid">
-            <h1 className="text-center mb-4 mt-4 fw-bold">Featured Courses</h1>
+        <div className="container-fluid ">
+            <h1 className="text-center mb-4 mt-4 fw-bold">Our Featured Courses</h1>
 
             <div className="position-relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 {courses.length > visibleCards && (
@@ -97,7 +99,7 @@ const FeaturedSection = () => {
 
                 <div className="d-flex overflow-hidden" style={{ width: "100%" }}>
                     <div
-                        className="d-flex transition-transform"
+                        className={`${styles.transitionTransform} d-flex`}
                         style={{
                             transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
                             transition: "transform 0.5s ease-in-out"

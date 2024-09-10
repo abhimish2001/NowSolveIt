@@ -14,60 +14,51 @@ h1 {
     overflow: hidden;
 }
 
-.d-flex {
-    display: flex;
+/* Scroll buttons */
+.prevButton,
+.nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #333;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+/* Position the left arrow on the left side of the container */
+.prevButton {
+    left: 10px;
+}
+
+/* Position the right arrow on the right side of the container */
+.nextButton {
+    right: 10px;
+}
+
+/* Hover effect for scroll buttons */
+.prevButton:hover,
+.nextButton:hover {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Course card container styling */
+.d-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    /* Ensure no wrapping */
+}
+
+/* Card container styling */
 .col-2 {
     flex: 1 0 16.66%;
     /* 1/6 of the width */
     padding: 10px;
-}
-
-/* Scroll buttons */
-.prevButton,
-.nextButton {
-    display: none;
-    /* Hide by default */
-    background-color: transparent;
-    border: none;
-    color: black;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-    outline: none;
-    transition: background-color 0.3s ease;
-}
-
-/* Show buttons on mobile view (below 768px) */
-@media (max-width: 768px) {
-
-    .prevButton,
-    .nextButton {
-        display: block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: rgba(0, 0, 0, 0.05);
-        padding: 10px 15px;
-        border-radius: 50%;
-        transition: background-color 0.3s ease, opacity 0.3s ease;
-    }
-
-    .prevButton {
-        left: 10px;
-    }
-
-    .nextButton {
-        right: 10px;
-    }
-
-    .prevButton:hover,
-    .nextButton:hover {
-        background-color: rgba(0, 0, 0, 0.2);
-    }
+    box-sizing: border-box;
 }
 
 /* Card hover effects */
@@ -78,9 +69,11 @@ h1 {
 }
 
 /* Card transition for smoother movement */
-.transition-transform {
+.transitionTransform {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
+    /* Ensure it takes full width */
 }
 
 /* Card responsiveness */
