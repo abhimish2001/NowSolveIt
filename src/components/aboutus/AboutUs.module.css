@@ -1,53 +1,49 @@
-.aboutUsSection {
-    background: #f7f7f7;
-    padding: 50px 20px;
+.aboutSection_row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 100px;
+  }
+  
+  .aboutSection_imgBox {
+    display: flex;
+    flex-direction: column;
+    width: 50%; 
+    margin-top: 10px;
+  }
+  
+  .aboutSection_img {
+    width: 50%; /* Adjust width here */
+    height: 400px; /* Adjust height here */
+  }
+  
+  .aboutSection_detailBox {
+    width: 50%;
+    padding-left: 100px; /* Text will take up 50% of the width */
+  }
+  
+  .aboutSection_detailBox h1 {
     text-align: center;
-}
-
-.title {
-    font-size: 3rem;
+    font-size: 2rem; /* Adjust font size if needed */
+    margin-top: 10px;
+    margin-bottom: 30px; /* Space below the heading */
+    position: relative; /* Required for positioning the pseudo-element */
+  }
+  
+  .aboutSection_detailBox h1::after {
+    content: "";
+    position: absolute;
+    width: 60px; /* Width of the blue line */
+    height: 7px; /* Thickness of the blue line */
+    background-color: #fb9c05; /* Blue color */
+    border-radius: 10px; /* Rounded corners for the line */
+    bottom: -10px; /* Position the line just below the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the line horizontally */
+  }
+  
+  .aboutSection_detailBox p {
+    color: grey;
     font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-.subtitle {
-    font-size: 2rem;
-    color: #fb9c05;
-    margin-bottom: 30px;
-}
-
-.description {
-    font-size: 1.2rem;
-    color: #666;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    padding: 0 20px;
-}
-
-@media (max-width: 768px) {
-    .title {
-        font-size: 2.5rem;
-    }
-
-    .subtitle {
-        font-size: 1.8rem;
-    }
-
-    .description {
-        font-size: 1.1rem;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        transform: translateY(30px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+  }
+  

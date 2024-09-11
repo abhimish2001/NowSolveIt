@@ -1,7 +1,8 @@
 import HeroSection from '../components/herosection/HeroSection';
 import FeaturedSection from '../components/coursecards/FeaturedSection';
-import AboutUs from '../components/aboutus/AboutUs';
+
 import TestimonialSection from '../components/testimonials/TestimonialSection';
+import AboutUs from '../components/aboutus/AboutUs';
 
 function App() {
     return (
@@ -9,6 +10,7 @@ function App() {
             <HeroSection />
             <FeaturedSection />
             <AboutUs />
+          
             <TestimonialSection />
         </div>
     );

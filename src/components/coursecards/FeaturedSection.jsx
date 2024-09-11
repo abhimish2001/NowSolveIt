@@ -102,7 +102,7 @@ const FeaturedSection = () => {
 
     return (
         <div className="container-fluid">
-            <h1 className="text-center mb-4 mt-4 fw-bold">Our Featured Courses</h1>
+            <h1 className={`text-center  mt-5 fw-bold ${styles.lineFeature}`}>Our Featured Courses</h1>
             <div className={styles.sliderContainer}>
                 <Slider {...settings}>
                     {courses.map((course, index) => (

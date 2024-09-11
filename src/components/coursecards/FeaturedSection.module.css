@@ -8,6 +8,24 @@
     box-sizing: border-box;
 }
 
+.lineFeature {
+   
+    font-size: 2rem; /* Adjust font size if needed */
+    margin: 0;
+    position: relative; /* Ensure pseudo-element is positioned relative to the heading */
+  }
+.lineFeature::after {
+    content: "";
+    position: absolute;
+    width: 60px; /* Width of the blue line */
+    height: 7px; /* Thickness of the blue line */
+    background-color: #fb9c05; /* Blue color */
+    border-radius: 10px; /* Rounded corners for the line */
+    bottom: -10px; /* Position the line just below the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the line horizontally */
+  }
+  
 /* Arrow styles */
 .arrow {
     position: absolute;
