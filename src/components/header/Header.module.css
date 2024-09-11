@@ -22,18 +22,20 @@
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.navbarCustom .nav-link:hover {
+.navbarCustom .nav-link:hover,
+.navbarCustom .nav-link:focus {
     color: #fb9c05;
     /* Orange text on hover */
     background-color: #ffffff;
     /* Background remains white on hover */
 }
 
+.navbarCustom .nav-link.active,
 .navbarCustom .activeLink {
-    color: #fb9c05;
-    /* Orange text for active link */
-    background-color: #ffffff;
-    /* Background remains white for active link */
+    color: #fb9c05 !important;
+    /* Force orange text for active link */
+    background-color: #ffffff !important;
+    /* Background remains white */
     padding: 8px 12px;
     border-radius: 5px;
 }

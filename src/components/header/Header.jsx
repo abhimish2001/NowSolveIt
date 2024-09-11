@@ -6,7 +6,6 @@ function Header() {
     const location = useLocation();
 
     useEffect(() => {
-
         import('bootstrap/dist/js/bootstrap.bundle.min.js');
     }, []);
 
