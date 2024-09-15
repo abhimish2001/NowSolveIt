@@ -32,8 +32,8 @@
 .closeButton {
     position: absolute;
     /* Position it relative to the modal content */
-    top: 20px;
-    right: 20px;
+    top: 40px;
+    right: 40px;
     border: none;
     background: #fb9c05;
     color: white;
