@@ -1,0 +1,39 @@
+{
+    "heading": "Personality Development, Communication & Aptitude Skills",
+    "intro": "Personality development, communication skills, and aptitude preparation are essential for both personal and professional growth. They help individuals to express themselves clearly, build confidence, improve relationships, and excel in competitive exams or job interviews.",
+    "sections": [
+        {
+            "title": "Personality Development",
+            "description": "Personality development involves enhancing and grooming one’s outer and inner self to bring about a positive change. It plays a significant role in improving communication skills, confidence, and the overall impact of an individual.",
+            "points": [
+                "Building self-confidence",
+                "Time management and discipline",
+                "Improving body language",
+                "Positive attitude and mindset"
+            ],
+            "image": "./pd.jpg"
+        },
+        {
+            "title": "Communication Skills",
+            "description": "Effective communication is key to success in every field. Good communication skills help in clearly expressing ideas, reducing misunderstandings, and fostering better relationships.",
+            "points": [
+                "Active listening and empathy",
+                "Clarity and conciseness in speech",
+                "Non-verbal communication (body language, tone)",
+                "Constructive feedback and persuasion"
+            ],
+            "image": "./communication.jpg"
+        },
+        {
+            "title": "Aptitude Preparation",
+            "description": "Aptitude preparation is vital for cracking competitive exams and job interviews. It includes practicing problem-solving, logical thinking, and numerical ability, which are essential for improving decision-making skills.",
+            "points": [
+                "Improving problem-solving skills",
+                "Practicing quantitative aptitude",
+                "Enhancing logical reasoning",
+                "Time management during exams"
+            ],
+            "image": "./aptitude.jpg"
+        }
+    ]
+}

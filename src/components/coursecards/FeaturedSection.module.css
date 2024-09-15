@@ -32,10 +32,7 @@
     /* Ensure it's fully visible */
 }
 
-.arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-}
+
 
 /* Override slick-carousel styles for horizontal alignment */
 .slick-slide {

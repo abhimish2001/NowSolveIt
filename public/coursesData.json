@@ -37,7 +37,7 @@
         "price": 2499,
         "duration": "5 Weeks",
         "description": "Learn Python programming from scratch, including syntax, data structures, and basic algorithms.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TBw16x0HJUQ4sWUV8RzHzK7LrYTibjU7HQ&s"
+        "image": "https://www.codebook.in/static/main/img/courses/4.jpg"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "price": 1999,
         "duration": "4 Weeks",
         "description": "Understand the C programming language, from basic syntax to memory management and pointers.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TBw16x0HJUQ4sWUV8RzHzK7LrYTibjU7HQ&s"
+        "image": "https://media.licdn.com/dms/image/D5612AQEHGZUx2evvxg/article-cover_image-shrink_600_2000/0/1688275415052?e=2147483647&v=beta&t=MiibYoaOd8k3EYKJGp_zBmSoyV_tklwOItiTYILUXKI"
     },
     {
         "id": 7,

@@ -29,33 +29,15 @@ const cardData = [
         imgSrc: dotnet,
         title: 'C#',
     },
-    {
-        imgSrc: dbms,
-        title: 'RDBMS',
-    },
-    {
-        imgSrc: reactImg,
-        title: 'React',
-    },
-    {
-        imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png',
-        title: 'MongoDB',
-    },
-    {
-        imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png',
-        title: 'C++',
-    },
-    {
-        imgSrc: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png',
-        title: 'C',
-    }
+
 ];
 
 function Cards() {
     return (
-        <div className={`container-fluid ${styles.bgColor} pt-5 pb-4`}>
-            <h2 className={`text-center ${styles.heading}`}>Notes</h2>
-            <div className="container mt-4">
+        <div className={`container-fluid ${styles.bgColor} pt-1 pb-3 mt-0`}>
+            <h1 className={`text-center mt-1 mb-5 fw-bold ${styles.lineFeature}`}>
+                Notes
+            </h1>        <div className="container">
                 <div className={`row ${styles.container}`}>
                     {cardData.map((card, index) => (
                         <div className="col" key={index}>

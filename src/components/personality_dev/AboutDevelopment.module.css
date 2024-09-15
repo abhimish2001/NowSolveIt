@@ -1,0 +1,161 @@
+.section {
+    padding: 50px 20px;
+    background-color: #eef2f7;
+    text-align: center;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.heading {
+    font-size: 1.8rem;
+    color: black;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.lineFeature {
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+}
+
+.lineFeature::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 7px;
+    background-color: #fb9c05;
+    border-radius: 10px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.intro {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.slider {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.slick-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-arrow {
+    font-size: 24px;
+    color: #fb9c05;
+    z-index: 1;
+}
+
+.slick-arrow:hover {
+    color: #e68a04;
+}
+
+/* Responsive Styles */
+
+/* For tablets and small screens */
+@media (max-width: 1024px) {
+    .heading {
+        font-size: 1.6rem;
+    }
+
+    .intro {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .lineFeature {
+        font-size: 1.8rem;
+    }
+
+    .lineFeature::after {
+        width: 50px;
+        height: 5px;
+    }
+
+    .slick-arrow {
+        font-size: 20px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 15px;
+    }
+
+    .heading {
+        font-size: 1.4rem;
+    }
+
+    .intro {
+        font-size: 1rem;
+    }
+
+    .lineFeature {
+        font-size: 1.6rem;
+    }
+
+    .lineFeature::after {
+        width: 40px;
+        height: 4px;
+    }
+
+    .slick-arrow {
+        font-size: 18px;
+    }
+
+    /* Adjust slick dots for better touch experience */
+    .slick-dots {
+        bottom: -25px;
+
+        li button:before {
+            font-size: 10px;
+        }
+    }
+}
+
+/* For very small mobile screens (e.g. phones) */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.2rem;
+    }
+
+    .intro {
+        font-size: 0.9rem;
+    }
+
+    .lineFeature {
+        font-size: 1.4rem;
+    }
+
+    .lineFeature::after {
+        width: 30px;
+        height: 3px;
+    }
+
+    .slick-arrow {
+        font-size: 16px;
+    }
+
+    .slick-dots {
+        bottom: -20px;
+    }
+}

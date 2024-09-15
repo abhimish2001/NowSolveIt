@@ -1,0 +1,122 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+}
+
+.textSection {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.imageSection {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.description {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.pointsList {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.point {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.enrollButton {
+    background-color: #fb9c05;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-top: auto;
+}
+
+.enrollButton:hover {
+    background-color: #e68a04;
+    transform: scale(1.1);
+}
+
+/* Responsive Styles */
+
+/* For smaller screens, make the layout vertical */
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .enrollButton {
+        margin-top: 15px;
+        align-self: center;
+    }
+
+    .textSection,
+    .imageSection {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 0.95rem;
+    }
+
+    .pointsList {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .enrollButton {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+}

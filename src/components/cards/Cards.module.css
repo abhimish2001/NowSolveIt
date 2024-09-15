@@ -1,9 +1,19 @@
-.heading {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 20px;
-    text-align: center;
+.lineFeature {
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+}
+
+.lineFeature::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 7px;
+    background-color: #fb9c05;
+    border-radius: 10px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .cardSize {
@@ -53,7 +63,7 @@
 
 .bgColor {
     margin-top: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #eef2f7;
 }
 
 .exploreButton {
@@ -70,45 +80,84 @@
 }
 
 .exploreButton:hover {
-    background-color: #fb9c05;
+    background-color: #e68a04;
     transform: scale(1.1);
 }
 
-/* Styles for horizontal card display on mobile view */
+/* Media Queries for Improved Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .cardSize {
+        width: 180px;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    .cardImg {
+        height: 90px;
+    }
+
+    .cardTitle {
+        font-size: 1.1rem;
+    }
+
+    .exploreButton {
+        font-size: 0.95rem;
+        padding: 8px 16px;
+    }
+}
+
+/* For smaller devices like mobile phones */
 @media (max-width: 768px) {
     .container {
         overflow-x: auto;
+        display: flex;
         /* Allow horizontal scrolling */
-    }
-
-    .row {
-        flex-direction: row;
-        /* Arrange cards in a row */
-    }
-
-    .col {
-        flex: 0 0 auto;
-        /* Prevent columns from shrinking */
-        margin-right: 10px;
-        /* Space between cards */
     }
 
     .cardSize {
         width: 150px;
-        /* Adjust width for mobile view */
         height: auto;
-        /* Adjust height for mobile view */
+        flex-shrink: 0;
+        /* Prevent the card from shrinking */
+        margin-right: 10px;
+        /* Space between cards */
     }
 
     .cardImg {
-        height: 120px;
-        /* Adjust image height for mobile view */
+        height: 80px;
+        width: 80px;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
     }
 
     .exploreButton {
         font-size: 0.9rem;
-        /* Adjust button font size */
-        padding: 8px 16px;
-        /* Adjust button padding */
+        padding: 8px 14px;
+    }
+}
+
+/* For very small mobile screens (like below 480px) */
+@media (max-width: 480px) {
+    .cardSize {
+        width: 120px;
+        height: auto;
+    }
+
+    .cardImg {
+        height: 70px;
+        width: 70px;
+    }
+
+    .cardTitle {
+        font-size: 0.9rem;
+    }
+
+    .exploreButton {
+        font-size: 0.85rem;
+        padding: 6px 12px;
     }
 }
