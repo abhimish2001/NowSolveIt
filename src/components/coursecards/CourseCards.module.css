@@ -2,30 +2,37 @@
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+    /* Smooth transition */
     padding: 20px;
     margin: 10px;
     max-width: 300px;
     height: 400px;
+    /* Fixed height */
     text-align: center;
-    position: static;
+    position: relative;
+    overflow: hidden;
+    /* Ensure overflow content is hidden */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Space out elements */
 }
 
 .card:hover {
     transform: translateY(-10px);
+    height: auto;
+    /* Expand height on hover to accommodate full description */
 }
 
 .courseImage {
     width: 100%;
-    /* Ensures the image takes up the full width of the card */
     height: 150px;
-    /* Sets a fixed height for the image */
+    /* Fixed height for image */
     object-fit: cover;
-    /* Ensures the image covers the area while maintaining aspect ratio */
+    /* Ensures the image covers the area */
     border-radius: 8px 8px 0 0;
-    /* Matches the card's top border radius */
     margin-bottom: 15px;
-    /* Adds some space between the image and the content */
 }
 
 .courseName {
@@ -33,6 +40,12 @@
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
+    overflow: hidden;
+    /* Hide overflow text */
+    text-overflow: ellipsis;
+    /* Add ellipsis for overflow text */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
 }
 
 .courseDetails {
@@ -49,6 +62,24 @@
     font-size: 0.8rem;
     color: #777;
     margin-bottom: 20px;
+    display: -webkit-box;
+    /* Creates a flex container */
+    -webkit-line-clamp: 3;
+    /* Limits the description to 3 lines */
+    -webkit-box-orient: vertical;
+    /* Vertical box orientation */
+    overflow: hidden;
+    /* Hide the overflowed content */
+    text-overflow: ellipsis;
+    /* Adds ellipsis to truncated content */
+    transition: -webkit-line-clamp 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+.card:hover .courseDescription {
+    -webkit-line-clamp: unset;
+    /* Show full description */
+    /* Additional styles if needed */
 }
 
 .enrollButton {
@@ -61,6 +92,8 @@
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    margin-top: auto;
+    /* Push the button to the bottom of the card */
 }
 
 .enrollButton:hover {

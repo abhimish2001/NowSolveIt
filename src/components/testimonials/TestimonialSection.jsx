@@ -1,42 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import TestimonialCard from './TestimonialCard';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './TestimonialSection.module.css';
 
-const testimonials = [
-  {
-    name: "Abhishek Mishra",
-    contact: "abhimish2001@gmail.com",
-    review: "This course was exceptional! The content was well-organized, and the instructors were very supportive and knowledgeable."
-  },
-  {
-    name: "Akash Yadav",
-    contact: "akashy5660@gmail.com",
-    review: "An excellent learning experience. The course material was comprehensive, and the guidance provided was extremely helpful."
-  },
-  {
-    name: "Shubham Kashyap",
-    contact: "sk8113347@gmail.com",
-    review: "I thoroughly enjoyed this program. The course was well-structured, and the practical insights were invaluable for my growth."
-  },
-  {
-    name: "Deepak Gupta",
-    contact: "deepakgupta97945549@gmail.com",
-    review: "A truly remarkable course! The quality of instruction and the clarity of the material were outstanding. Highly recommend!"
-  },
-  {
-    name: "Ravishankar Pandey",
-    contact: "ravishankar056@gmail.com",
-    review: "The course was incredibly beneficial. The instructors were expert and provided useful feedback that helped me advance my skills."
-  },
-
-];
-
-
-
 const TestimonialSection = () => {
+  const [testimonials, setTestimonials] = useState([]);
+
+  // Fetch data from the public folder
+  useEffect(() => {
+    fetch('/testimonialsData.json')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setTestimonials(data);
+      })
+      .catch((error) => {
+        console.error('Error fetching testimonials data:', error);
+      });
+  }, []);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -64,11 +52,11 @@ const TestimonialSection = () => {
 
   return (
     <div className={styles.testimonialSection}>
-      <h2 className='fw-bold'>What Our Students Say</h2>
+      <h2 className="fw-bold">What Our Students Say</h2>
       <Slider {...settings} className={styles.slider}>
-        {testimonials.map((testimonial, index) => (
+        {testimonials.map((testimonial) => (
           <TestimonialCard
-            key={index}
+            key={testimonial.id}
             name={testimonial.name}
             contact={testimonial.contact}
             review={testimonial.review}

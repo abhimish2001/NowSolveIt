@@ -20,8 +20,9 @@ function Footer() {
                     <div className="col-lg-4 mb-3 mb-lg-0">
                         <h5 className="text-uppercase">About NowSolveIt</h5>
                         <p>
-                            Providing top-notch training and development solutions for a better learning experience.
+                            Providing top-notch training and development solutions for a better learning experience. Our goal is to empower individuals with the skills and confidence needed to excel in their careers and personal growth.
                         </p>
+
                     </div>
                     <div className="col-lg-4 mb-3 mb-lg-0">
                         <h5 className="text-uppercase">Quick Links</h5>

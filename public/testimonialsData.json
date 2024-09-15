@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Abhishek Mishra",
+    "contact": "abhimish2001@gmail.com",
+    "review": "This course was exceptional! The content was well-organized, and the instructors were very supportive and knowledgeable."
+  },
+  {
+    "id": 2,
+    "name": "Akash Yadav",
+    "contact": "akashy5660@gmail.com",
+    "review": "An excellent learning experience. The course material was comprehensive, and the guidance provided was extremely helpful."
+  },
+  {
+    "id": 3,
+    "name": "Shubham Kashyap",
+    "contact": "sk8113347@gmail.com",
+    "review": "I thoroughly enjoyed this program. The course was well-structured, and the practical insights were invaluable for my growth."
+  },
+  {
+    "id": 4,
+    "name": "Deepak Gupta",
+    "contact": "deepakgupta97945549@gmail.com",
+    "review": "A truly remarkable course! The quality of instruction and the clarity of the material were outstanding. Highly recommend!"
+  },
+  {
+    "id": 5,
+    "name": "Ravishankar Pandey",
+    "contact": "ravishankar056@gmail.com",
+    "review": "The course was incredibly beneficial. The instructors were expert and provided useful feedback that helped me advance my skills."
+  }
+]
