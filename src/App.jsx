@@ -7,6 +7,7 @@ import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import NotFoundPage from './pages/notfoundpage/NotFoundPage';
 import Top from './components/top/Top';
+import EnrollmentForm from './components/enrollmentForm/EnrollmentForm';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/courses" element={<CoursePage />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/enrollment" element={<EnrollmentForm />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

@@ -27,8 +27,7 @@ const ContactUs = () => {
     }
 
     try {
-      // Make POST request to your server
-      const response = await fetch('http://localhost:8006/register', {
+      const response = await fetch('http://localhost:5000/api/email/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -44,14 +43,14 @@ const ContactUs = () => {
           message: '',
         });
       } else {
-        toast.error('Failed to send message. Please try again later.');
+        const errorText = await response.text();
+        throw new Error(`HTTP error! Status: ${response.status}. Details: ${errorText}`);
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      toast.error('Error sending message. Please try again.');
+      toast.error(`Error sending message: ${error.message}`);
     }
   };
-
 
   return (
     <div className={styles.contactForm}>

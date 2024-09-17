@@ -10,7 +10,7 @@ function Header() {
     }, []);
 
     return (
-        <nav className={`navbar navbar-expand-lg sticky-top ${styles.navbarCustom}`}>
+        <nav className={`navbar navbar-expand-lg  ${styles.navbarCustom}`}>
             <div className="container-fluid">
                 <Link className={`navbar-brand fs-2 ${styles.customBrand}`} to="/">
                     NowSolveIt

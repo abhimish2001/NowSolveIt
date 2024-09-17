@@ -37,7 +37,7 @@ const AboutDevelopment = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    arrows: false,
+    arrows: true,
     centerMode: true,
     centerPadding: '0',  // Adjust as per design preference
   };
@@ -46,9 +46,9 @@ const AboutDevelopment = () => {
     <section className={`container-fluid ${styles.section}`}>
       <div className={styles.container}>
         <h1 className={`text-center mt-1 mb-4 fw-bold ${styles.lineFeature}`}>
-          {data.heading}
+          Our Professional Courses
         </h1>
-        <p className={styles.intro}>{data.intro}</p>
+        <p className={styles.intro}>Personality development, communication skills, and aptitude preparation are essential for both personal and professional growth. They help individuals to express themselves clearly, build confidence, improve relationships, and excel in competitive exams or job interviews.</p>
         <Slider {...settings} className={styles.slider}>
           {data.sections.map((section, index) => (
             <LandScapeCard

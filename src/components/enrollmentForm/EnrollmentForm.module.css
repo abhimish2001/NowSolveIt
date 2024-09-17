@@ -1,0 +1,90 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.formWrapper,
+.receiptWrapper {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.formTitle,
+.receiptTitle {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.receiptSubtitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.form,
+.receiptContent {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formGroup input,
+.formGroup select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.feeDisplay {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.submitButton {
+    background-color: #fb9c05;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.downloadButton {
+    background-color: #fb9c05;
+    margin-right: 10px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submitButton:hover,
+.downloadButton:hover {
+    background-color: #fb9c05;
+}
+
+.receiptContent p {
+    margin: 5px 0;
+}

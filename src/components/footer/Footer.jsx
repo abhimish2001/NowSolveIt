@@ -20,15 +20,15 @@ function Footer() {
                     <div className="col-lg-4 mb-3 mb-lg-0">
                         <h5 className="text-uppercase">About NowSolveIt</h5>
                         <p>
-                            Providing top-notch training and development solutions for a better learning experience. Our goal is to empower individuals with the skills and confidence needed to excel in their careers and personal growth.
+                            Our goal is to empower individuals with the skills and confidence needed to excel in their careers and personal growth.
                         </p>
 
                     </div>
                     <div className="col-lg-4 mb-3 mb-lg-0">
                         <h5 className="text-uppercase">Quick Links</h5>
-                        <NavLink to="/home" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>Home</NavLink>
-                        <NavLink to="/courses" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>Courses</NavLink>
-                        <NavLink to="/contact" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>Contact Us</NavLink>
+                        <NavLink to="/home" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>HOME</NavLink>
+                        <NavLink to="/courses" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>COURSES</NavLink>
+                        <NavLink to="/contact" className={`text-light d-block mb-2 ${styles.link}`} activeclassname={styles.activeLink}>CONTACT US</NavLink>
 
                     </div>
                     <div className="col-lg-4">
@@ -53,7 +53,7 @@ function Footer() {
                         <p>&copy; 2024 NowSolveIt. All Rights Reserved.</p>
                         <button onClick={() => setPrivacyPolicyOpen(true)} className="text-light mx-2 btn btn-link">Privacy Policy</button>
                         <button onClick={() => setTermsOfServiceOpen(true)} className="text-light mx-2 btn btn-link">Terms of Service</button>
-                        <button onClick={() => setFaqs(true)} className="text-light mx-2 btn btn-link">FAQS</button>
+                        <button onClick={() => setFaqs(true)} className="text-light mx-2 btn btn-link">FAQs</button>
 
                     </div>
                 </div>

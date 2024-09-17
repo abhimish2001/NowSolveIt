@@ -49,24 +49,7 @@
     margin-bottom: 30px;
 }
 
-.slick-slide {
-    display: flex;
-    justify-content: center;
-}
 
-.slick-dots {
-    bottom: -30px;
-}
-
-.slick-arrow {
-    font-size: 24px;
-    color: #fb9c05;
-    z-index: 1;
-}
-
-.slick-arrow:hover {
-    color: #e68a04;
-}
 
 /* Responsive Styles */
 
