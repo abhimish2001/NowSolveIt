@@ -27,13 +27,14 @@ const ContactUs = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/email/register', {
+      const response = await fetch('http://localhost:5243/api/email/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
+
 
       if (response.ok) {
         toast.success('Message sent successfully!');
@@ -48,9 +49,14 @@ const ContactUs = () => {
       }
     } catch (error) {
       console.error('Error sending message:', error);
-      toast.error(`Error sending message: ${error.message}`);
+      if (error.message.includes("Failed to fetch")) {
+        toast.error("Network error: Unable to reach the backend API.");
+      } else {
+        toast.error(`Error sending message: ${error.message}`);
+      }
     }
   };
+
 
   return (
     <div className={styles.contactForm}>

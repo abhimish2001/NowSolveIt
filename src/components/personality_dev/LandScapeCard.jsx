@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for programmatic navigation
-import styles from './LandscapeCard.module.css';
+import styles from './LandScapeCard.module.css';
 
 const LandScapeCard = ({ title, description, points, image }) => {
     const navigate = useNavigate(); // Initialize useNavigate

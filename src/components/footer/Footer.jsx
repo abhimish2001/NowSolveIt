@@ -50,10 +50,11 @@ function Footer() {
                 <hr className="my-4" />
                 <div className="row">
                     <div className="col-12">
-                        <p>&copy; 2024 NowSolveIt. All Rights Reserved.</p>
+
                         <button onClick={() => setPrivacyPolicyOpen(true)} className="text-light mx-2 btn btn-link">Privacy Policy</button>
                         <button onClick={() => setTermsOfServiceOpen(true)} className="text-light mx-2 btn btn-link">Terms of Service</button>
                         <button onClick={() => setFaqs(true)} className="text-light mx-2 btn btn-link">FAQs</button>
+                        <p className='mt-3'>&copy; 2024 NowSolveIt. All Rights Reserved.</p>
 
                     </div>
                 </div>

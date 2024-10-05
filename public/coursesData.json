@@ -1,74 +1,82 @@
 [
     {
         "id": 1,
-        "name": "JavaScript Basics",
-        "price": 1999,
-        "duration": "4 Weeks",
-        "description": "Learn the fundamentals of JavaScript, including variables, loops, functions, and DOM manipulation.",
-        "image": "https://img.freepik.com/free-vector/frontend-development-concept-website-interface-design-improvement-web-page-programming-coding-testing-it-profession-isolated-flat-vector-illustration_613284-2357.jpg"
+        "name": "RDBMS",
+        "price": 1500,
+        "duration": "6 Weeks",
+        "description": "Learn relational database management systems, including SQL and database design concepts.",
+        "image": "./dbms.png"
     },
     {
         "id": 2,
-        "name": "JavaScript Advanced",
-        "price": 3499,
+        "name": "Frontend Development",
+        "price": 1500,
         "duration": "6 Weeks",
-        "description": "Deep dive into advanced JavaScript topics such as asynchronous programming, closures, and ES6 features.",
-        "image": "https://img.freepik.com/free-vector/frontend-development-concept-website-interface-design-improvement-web-page-programming-coding-testing-it-profession-isolated-flat-vector-illustration_613284-2357.jpg"
+        "description": "Master HTML, CSS, and JavaScript to build beautiful websites and responsive UIs.",
+        "image": "./frontend.jpg"
     },
     {
         "id": 3,
-        "name": ".NET Framework",
-        "price": 3999,
-        "duration": "8 Weeks",
-        "description": "Become proficient in .NET framework to develop enterprise-level applications.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8TBw16x0HJUQ4sWUV8RzHzK7LrYTibjU7HQ&s"
+        "name": "C# Programming",
+        "price": 3000,
+        "duration": "4 Weeks",
+        "description": "Understand the C# programming language, covering basic syntax, object-oriented programming, and .NET framework.",
+        "image": "./csharp.png"
     },
     {
         "id": 4,
-        "name": "React",
-        "price": 2999,
-        "duration": "6 Weeks",
-        "description": "Master React to build modern web applications with reusable components and state management.",
-        "image": "https://images.prismic.io/loco-blogs/79328284-f97b-489f-924c-eb3b17e34b56_image2.png?auto=compress%2Cformat&rect=0%2C0%2C1999%2C1124&w=1920&h=1080&ar=1.91%3A1"
+        "name": "Basic Python",
+        "price": 3000,
+        "duration": "4 Weeks",
+        "description": "Learn Python programming from scratch, covering syntax, data structures, and basic scripting.",
+        "image": "./python.jpg"
     },
     {
         "id": 5,
-        "name": "Python",
-        "price": 2499,
-        "duration": "5 Weeks",
-        "description": "Learn Python programming from scratch, including syntax, data structures, and basic algorithms.",
-        "image": "https://www.codebook.in/static/main/img/courses/4.jpg"
+        "name": "Manual Testing Basics",
+        "price": 3000,
+        "duration": "8 Weeks",
+        "description": "Understand the fundamentals of manual software testing, covering test case writing and defect management.",
+        "image": "./manual_testing.jpeg"
     },
     {
         "id": 6,
-        "name": "C Programming",
-        "price": 1999,
-        "duration": "4 Weeks",
-        "description": "Understand the C programming language, from basic syntax to memory management and pointers.",
-        "image": "https://media.licdn.com/dms/image/D5612AQEHGZUx2evvxg/article-cover_image-shrink_600_2000/0/1688275415052?e=2147483647&v=beta&t=MiibYoaOd8k3EYKJGp_zBmSoyV_tklwOItiTYILUXKI"
+        "name": "Testing Basic Concepts and Automation",
+        "price": 15000,
+        "duration": "12 Weeks",
+        "description": "Comprehensive course covering testing fundamentals, manual testing, and automation with Selenium and Playwright.",
+        "image": "./auto_basics.png"
     },
     {
         "id": 7,
-        "name": "DBMS",
-        "price": 2499,
+        "name": "Advanced Testing Automation",
+        "price": 5000,
         "duration": "6 Weeks",
-        "description": "Learn relational database management systems, including SQL and database design concepts.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKdzPg6woox3CU85IZ3RhNszv6d4s2gzLnRw&s"
+        "description": "Learn advanced test automation techniques and frameworks for efficient testing automation.",
+        "image": "./advanced_automation.png"
     },
     {
         "id": 8,
-        "name": "Frontend Development",
-        "price": 2999,
-        "duration": "6 Weeks",
-        "description": "Master HTML, CSS, and JavaScript to build beautiful websites and responsive UIs.",
-        "image": "https://img.freepik.com/free-vector/frontend-development-concept-website-interface-design-improvement-web-page-programming-coding-testing-it-profession-isolated-flat-vector-illustration_613284-2357.jpg"
+        "name": "Full Stack Testing",
+        "price": 18000,
+        "duration": "16 Weeks",
+        "description": "Complete testing suite covering basics, manual testing, automation with Selenium/Playwright, and advanced frameworks.",
+        "image": "./full_testing.png"
     },
     {
         "id": 9,
-        "name": "Backend Development",
-        "price": 3499,
-        "duration": "8 Weeks",
-        "description": "Learn server-side development with Node.js, Express, and databases for scalable apps.",
-        "image": "https://img.freepik.com/free-vector/back-end-typographic-header-software-development-process-website-interface-design-improvement-programming-coding-it-profession-isolated-flat-vector-illustration_613284-210.jpg"
+        "name": "Python Full Stack",
+        "price": 15000,
+        "duration": "10 Weeks",
+        "description": "Become a proficient full-stack developer using Python, covering Django, RESTful APIs, and front-end integration.",
+        "image": "./python_fullstack.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Dotnet Core Full Stack",
+        "price": 15000,
+        "duration": "10 Weeks",
+        "description": "Master full-stack development using .NET Core, covering front-end, back-end, and database integration.",
+        "image": "./dotnet.png"
     }
 ]

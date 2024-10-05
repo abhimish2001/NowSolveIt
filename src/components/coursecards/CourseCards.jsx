@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom'; // Import useNavigate for progra
 const CourseCard = ({ course }) => {
     const { name, price, duration, description, image } = course;
 
-    const navigate = useNavigate(); // Initialize useNavigate
+    {/*const navigate = useNavigate(); // Initialize useNavigate
 
-    {/*const openEnrollmentForm = () => {
+    const openEnrollmentForm = () => {
         // Navigate to the enrollment form within the app
         navigate('/enrollment');
     };*/}

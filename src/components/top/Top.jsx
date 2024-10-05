@@ -11,7 +11,7 @@ const Top = () => {
                         <ul className={styles.headerInfo}>
                             <li>
                                 <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-                                <a href="tel:01234567897">8865745689, 7897475542</a>
+                                <a href="https://wa.me/918005122321">8005122321, 7897475542</a>
                             </li>
                             <li>
                                 <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
