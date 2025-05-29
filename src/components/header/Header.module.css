@@ -39,3 +39,15 @@
     padding: 8px 12px;
     border-radius: 5px;
 }
+
+.userBox {
+    min-width: 180px;
+    transition: all 0.3s ease;
+  }
+
+  .usernameText {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  

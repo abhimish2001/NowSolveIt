@@ -1,95 +1,59 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from './ContactUs.module.css';
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const form = useRef();
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error('Please fill in all fields!');
-      return;
-    }
-
-    try {
-      const response = await fetch('http://localhost:5243/api/email/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+    emailjs
+      .sendForm('service_1odjfoo', 'template_m3csym8', form.current, 'rx9NPuRjzJiDEh98p')
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          toast.success('Message sent successfully!');
+          form.current.reset();
         },
-        body: JSON.stringify(formData),
-      });
-
-
-      if (response.ok) {
-        toast.success('Message sent successfully!');
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-      } else {
-        const errorText = await response.text();
-        throw new Error(`HTTP error! Status: ${response.status}. Details: ${errorText}`);
-      }
-    } catch (error) {
-      console.error('Error sending message:', error);
-      if (error.message.includes("Failed to fetch")) {
-        toast.error("Network error: Unable to reach the backend API.");
-      } else {
-        toast.error(`Error sending message: ${error.message}`);
-      }
-    }
+        (error) => {
+          console.error('FAILED...', error.text);
+          toast.error('Failed to send the message. Please try again.');
+        }
+      );
   };
-
 
   return (
     <div className={styles.contactForm}>
       <h2 className={styles.heading}>Contact Us</h2>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <div className={styles.formGroup}>
+          <label className={styles.label}></label>
           <input
             type="text"
-            name="name"
+            name="user_name"
             placeholder="Your Name"
-            value={formData.name}
-            onChange={handleInputChange}
             className={styles.input}
             required
           />
         </div>
         <div className={styles.formGroup}>
+          <label className={styles.label}></label>
           <input
             type="email"
-            name="email"
+            name="user_email"
             placeholder="Your Email"
-            value={formData.email}
-            onChange={handleInputChange}
             className={styles.input}
             required
           />
         </div>
         <div className={styles.formGroup}>
+          <label className={styles.label}></label>
           <textarea
             name="message"
             placeholder="Your Message"
-            value={formData.message}
-            onChange={handleInputChange}
             className={styles.textarea}
             required
           ></textarea>
@@ -98,6 +62,7 @@ const ContactUs = () => {
           Send Message
         </button>
       </form>
+      {/* Toastify container to show notifications */}
       <ToastContainer
         position="top-center"
         autoClose={5000}
