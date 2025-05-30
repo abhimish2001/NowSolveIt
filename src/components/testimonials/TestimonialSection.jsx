@@ -9,7 +9,7 @@ const TestimonialSection = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/testimonials') // or your deployed API URL
+    fetch('https://nsi-mern-backend.onrender.com/api/testimonials') // or your deployed API URL
       .then((res) => res.json())
       .then((data) => setTestimonials(data))
       .catch((err) => console.error('Error fetching testimonials:', err));
